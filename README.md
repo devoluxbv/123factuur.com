@@ -16,10 +16,11 @@ Project Structure
 ```
 project_root/
 ├── factuur/
+│   ├── config/
 │   ├── main.py
 │   ├── requirements.txt
 │   └── ...
-└──venv/
+└── venv/
 ```
 
 Create a virtual environment
