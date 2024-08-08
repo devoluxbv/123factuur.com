@@ -38,7 +38,9 @@ CSRF_TRUSTED_ORIGINS = ['https://factuur.com']
 
 # Apps
 LOCAL_APPS = [
-    'pages'
+    'pages',
+    'sass_processor',
+    'compressor',
 ]
 
 DJANGO_APPS = [
@@ -55,9 +57,19 @@ THIRD_PARTY = [
     'rest_framework',
     'django_filters'
 ]
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY + LOCAL_APPS
 
+STATICFILES_FINDERS = [
+    'compressor.finders.CompressorFinder',
+]
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
+COMPRESS_ROOT = STATIC_ROOT
+SASS_PROCESSOR_ENABLED = True
+SASS_PROCESSOR_INCLUDE_DIRS = [
+    os.path.join(BASE_DIR, 'static', 'sass'),
+]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -147,7 +159,7 @@ LANGUAGES = [
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
