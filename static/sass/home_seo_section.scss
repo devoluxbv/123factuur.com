@@ -1,0 +1,19 @@
+@import './styles.scss';
+.home_seo_section {
+  width: calc(100% - 40px);
+  margin: auto;
+  h3 {
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.4px;
+    text-align: center;
+  }
+  p {
+    font-family: 'Nunito Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
+}

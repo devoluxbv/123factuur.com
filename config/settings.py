@@ -39,6 +39,7 @@ CSRF_TRUSTED_ORIGINS = ['https://factuur.com']
 # Apps
 LOCAL_APPS = [
     'pages',
+
 ]
 
 DJANGO_APPS = [
@@ -54,15 +55,24 @@ DJANGO_APPS = [
 THIRD_PARTY = [
     'rest_framework',
     'django_filters',
-    'sass_processor',
+    'sass_processor'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY + LOCAL_APPS
 
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+]
 SASS_PROCESSOR_ENABLED = True
 SASS_PROCESSOR_INCLUDE_DIRS = [
     os.path.join(BASE_DIR, 'static', 'sass'),
 ]
+
+SASS_PROCESSOR_ROOT = BASE_DIR / 'static'
+SASS_PROCESSOR_OUTPUT_DIR = 'sass/'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -156,19 +166,14 @@ LANGUAGES = [
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
+
     # Add other static directories here
 ]
 
-STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
-]
 
-SASS_PROCESSOR_ROOT = BASE_DIR / 'static'
+# SASS_PROCESSOR_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

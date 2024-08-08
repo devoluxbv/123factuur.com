@@ -1,0 +1,26 @@
+body {
+  margin: 0px;
+  padding: 0px; }
+
+footer {
+  height: 229px;
+  width: calc(100% - 40px);
+  background-color: #2d572b;
+  padding: 40px 20px;
+  color: #fff; }
+  footer h1 {
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.05px;
+    text-align: center; }
+    footer h1 span {
+      color: #16a34a; }
+  footer p {
+    font-family: 'Nunito Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center; }
+
+/*# sourceMappingURL=footer.css.map */

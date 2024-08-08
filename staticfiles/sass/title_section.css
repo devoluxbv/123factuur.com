@@ -1,6 +1,10 @@
+body {
+  margin: 0px;
+  padding: 0px; }
+
 .title_section {
   width: calc(100% - 40px);
-  margin: auto; }
+  margin: 84px auto; }
   .title_section h1 {
     font-family: 'Poppins';
     font-size: 40px;
@@ -29,6 +33,6 @@
     line-height: 21.78px;
     text-align: left;
     background-color: #16a34a;
-    color: #fff; }
+    color: #ffffff; }
 
 /*# sourceMappingURL=title_section.css.map */
