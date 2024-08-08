@@ -1,0 +1,26 @@
+@import './styles.scss';
+.title_section {
+  width: calc(100% - 40px);
+  margin: auto;
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+  }
+  .green_button_link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 64px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    text-align: left;
+    background-color: $green;
+    color: #fff;
+  }
+}

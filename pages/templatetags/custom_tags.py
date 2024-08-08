@@ -8,7 +8,7 @@ register = template.Library()
 @register.simple_tag(takes_context=True)
 def include_template(context, template_name):
     template_paths = {
-        'News Section': 'news/news_list.html',
+        'News Section': 'home/title.html',
     }
 
     template_path = template_paths.get(template_name)
