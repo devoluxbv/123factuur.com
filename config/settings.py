@@ -39,8 +39,6 @@ CSRF_TRUSTED_ORIGINS = ['https://factuur.com']
 # Apps
 LOCAL_APPS = [
     'pages',
-    'sass_processor',
-    'compressor',
 ]
 
 DJANGO_APPS = [
@@ -55,17 +53,12 @@ DJANGO_APPS = [
 
 THIRD_PARTY = [
     'rest_framework',
-    'django_filters'
+    'django_filters',
+    'sass_processor',
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY + LOCAL_APPS
 
-STATICFILES_FINDERS = [
-    'compressor.finders.CompressorFinder',
-]
-COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = True
-COMPRESS_ROOT = STATIC_ROOT
 SASS_PROCESSOR_ENABLED = True
 SASS_PROCESSOR_INCLUDE_DIRS = [
     os.path.join(BASE_DIR, 'static', 'sass'),
@@ -160,9 +153,22 @@ LANGUAGES = [
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 
-
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+    # Add other static directories here
+]
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+]
+
+SASS_PROCESSOR_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
