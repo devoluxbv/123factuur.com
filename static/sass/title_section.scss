@@ -3,12 +3,22 @@
   width: calc(100% - 40px);
   margin: auto;
   h1 {
+    font-family: 'Poppins';
     font-size: 40px;
     font-weight: 700;
     line-height: 48px;
     text-align: center;
   }
+  p {
+    font-family: 'Nunito Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
   .green_button_link {
+    text-decoration: none;
+    border-radius: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,6 +26,7 @@
     gap: 8px;
     height: 64px;
     width: 100%;
+    font-family: 'Inter';
     font-size: 18px;
     font-weight: 400;
     line-height: 21.78px;
