@@ -7,15 +7,25 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
-  padding: 26px 0px;
-  font-family: 'Inter';
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 29.05px;
-  text-align: center;
-  background-color: #FFF; }
-  header span {
-    color: #16a34a; }
+  left: 0; }
+  header .header_container {
+    width: calc(100% - 40px);
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 20px;
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.05px;
+    text-align: center;
+    background-color: #fff; }
+    header .header_container span {
+      color: #16a34a; }
+    header .header_container div:nth-child(2) {
+      flex-grow: 1;
+      text-align: center; }
 
 /*# sourceMappingURL=header.css.map */

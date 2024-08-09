@@ -1,0 +1,201 @@
+body {
+  margin: 0px;
+  padding: 0px; }
+
+.invoice_list_title {
+  width: calc(100% - 40px);
+  margin: 84px auto; }
+  .invoice_list_title h1 {
+    font-family: 'Poppins';
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center; }
+  .invoice_list_title .circle_with_plus {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    background-color: #16a34a; }
+  .invoice_list_title .invoices_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 40px; }
+    .invoice_list_title .invoices_wrapper .invoice {
+      border: 1.5px solid #0b31b84d;
+      border-radius: 24px;
+      width: 350px;
+      height: 156px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px; }
+      .invoice_list_title .invoices_wrapper .invoice .invoice_paragraph {
+        margin: 0px; }
+        .invoice_list_title .invoices_wrapper .invoice .invoice_paragraph:first-of-type {
+          font-family: 'Poppins';
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 38.4px;
+          text-align: center; }
+        .invoice_list_title .invoices_wrapper .invoice .invoice_paragraph:last-of-type {
+          font-family: 'Nunito Sans';
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          text-align: left; }
+    .invoice_list_title .invoices_wrapper .invoice_active {
+      border-radius: 24px;
+      width: 350px;
+      height: 156px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 41px;
+      background-color: #ccd1c8; }
+      .invoice_list_title .invoices_wrapper .invoice_active .invoice_paragraph {
+        margin: 0px; }
+        .invoice_list_title .invoices_wrapper .invoice_active .invoice_paragraph:first-of-type {
+          font-family: 'Poppins';
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 38.4px;
+          text-align: center; }
+        .invoice_list_title .invoices_wrapper .invoice_active .invoice_paragraph:last-of-type {
+          font-family: 'Nunito Sans';
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          text-align: left; }
+  .invoice_list_title .invoices_filter_wrapper {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; }
+    .invoice_list_title .invoices_filter_wrapper input {
+      width: 290px;
+      height: 64px;
+      border: 1px solid #0b31b84d;
+      padding-left: 60px;
+      border-radius: 15px;
+      background: url("../img/lens_in_input.png") no-repeat 15px center; }
+      .invoice_list_title .invoices_filter_wrapper input::placeholder {
+        font-family: 'Nunito Sans';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: left;
+        color: #000; }
+    .invoice_list_title .invoices_filter_wrapper .invoice_type_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px; }
+      .invoice_list_title .invoices_filter_wrapper .invoice_type_wrapper .invoice_type {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px; }
+        .invoice_list_title .invoices_filter_wrapper .invoice_type_wrapper .invoice_type .invoice_type_first {
+          background-color: #16a34a; }
+        .invoice_list_title .invoices_filter_wrapper .invoice_type_wrapper .invoice_type .invoice_type_second {
+          background-color: #3193624d; }
+        .invoice_list_title .invoices_filter_wrapper .invoice_type_wrapper .invoice_type .invoice_type_third {
+          background-color: #b39d214d; }
+        .invoice_list_title .invoices_filter_wrapper .invoice_type_wrapper .invoice_type div {
+          width: 30px;
+          height: 30px;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Nunito Sans';
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px; }
+        .invoice_list_title .invoices_filter_wrapper .invoice_type_wrapper .invoice_type span {
+          font-family: 'Nunito Sans';
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          text-align: left; }
+    .invoice_list_title .invoices_filter_wrapper .buttons_filter_wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px; }
+      .invoice_list_title .invoices_filter_wrapper .buttons_filter_wrapper button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        cursor: pointer;
+        font-family: 'Nunito Sans';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        width: 350px;
+        height: 64px;
+        border: 1px solid #0b31b84d;
+        border-radius: 15px;
+        background-color: #fff;
+        transition: all 0.3s ease; }
+        .invoice_list_title .invoices_filter_wrapper .buttons_filter_wrapper button:hover {
+          background-color: #0b31b84d;
+          transition: all 0.3s ease; }
+        .invoice_list_title .invoices_filter_wrapper .buttons_filter_wrapper button:active {
+          background-color: #1c6a9e;
+          transform: scale(0.98); }
+  .invoice_list_title table {
+    margin-top: 80px;
+    width: 100%; }
+    .invoice_list_title table .thead_cell_1 {
+      text-align: start; }
+    .invoice_list_title table .thead_cell_2 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+    .invoice_list_title table tr td:nth-child(3) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; }
+    .invoice_list_title table tr td:nth-child(2) {
+      font-family: 'Nunito Sans';
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      text-align: left; }
+    .invoice_list_title table tr td:nth-child(1) .status_color_poid {
+      background-color: #3193624d; }
+    .invoice_list_title table tr td:nth-child(1) .status_color_draft {
+      background-color: rgba(0, 0, 0, 0.3); }
+    .invoice_list_title table tr td:nth-child(1) .status_color_overdue {
+      background-color: #b39d214d; }
+    .invoice_list_title table tr td:nth-child(1) .status_color_poid,
+    .invoice_list_title table tr td:nth-child(1) .status_color_draft,
+    .invoice_list_title table tr td:nth-child(1) .status_color_overdue {
+      width: 89px;
+      height: 40px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Nunito Sans';
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px; }
+
+/*# sourceMappingURL=invoices_list_title.css.map */

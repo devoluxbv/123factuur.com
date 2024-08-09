@@ -1,0 +1,239 @@
+@import './styles.scss';
+
+.invoice_list_title {
+  width: calc(100% - 40px);
+  margin: 84px auto;
+  h1 {
+    font-family: 'Poppins';
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+  }
+  .circle_with_plus {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    background-color: $green;
+  }
+  .invoices_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 40px;
+    .invoice {
+      border: 1.5px solid $blue_light;
+      border-radius: 24px;
+      width: 350px;
+      height: 156px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      .invoice_paragraph {
+        margin: 0px;
+        &:first-of-type {
+          font-family: 'Poppins';
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 38.4px;
+          text-align: center;
+        }
+        &:last-of-type {
+          font-family: 'Nunito Sans';
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          text-align: left;
+        }
+      }
+    }
+    .invoice_active {
+      border-radius: 24px;
+      width: 350px;
+      height: 156px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 41px;
+      background-color: rgba(204, 209, 200, 1);
+      .invoice_paragraph {
+        margin: 0px;
+        &:first-of-type {
+          font-family: 'Poppins';
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 38.4px;
+          text-align: center;
+        }
+        &:last-of-type {
+          font-family: 'Nunito Sans';
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .invoices_filter_wrapper {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    input {
+      width: 290px;
+      height: 64px;
+      border: 1px solid $blue_light;
+      padding-left: 60px;
+      border-radius: 15px;
+      background: url('../img/lens_in_input.png') no-repeat 15px center;
+      &::placeholder {
+        font-family: 'Nunito Sans';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: left;
+        color: #000;
+      }
+    }
+
+    .invoice_type_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      .invoice_type {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        .invoice_type_first {
+          background-color: $green;
+        }
+        .invoice_type_second {
+          background-color: $light_green;
+        }
+        .invoice_type_third {
+          background-color: $beige;
+        }
+        div {
+          width: 30px;
+          height: 30px;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Nunito Sans';
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+        }
+        span {
+          font-family: 'Nunito Sans';
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          text-align: left;
+        }
+      }
+    }
+    .buttons_filter_wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        cursor: pointer;
+        font-family: 'Nunito Sans';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        width: 350px;
+        height: 64px;
+        border: 1px solid $blue_light;
+        border-radius: 15px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: $blue_light;
+          transition: all 0.3s ease;
+        }
+        &:active {
+          background-color: #1c6a9e;
+          transform: scale(0.98);
+        }
+      }
+    }
+  }
+  table {
+    margin-top: 80px;
+    width: 100%;
+    .thead_cell_1 {
+      text-align: start;
+    }
+    .thead_cell_2 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    tr {
+     
+      td:nth-child(3) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      td:nth-child(2) {
+        font-family: 'Nunito Sans';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: left;
+        
+      }
+      td:nth-child(1) {
+        .status_color_poid {
+          background-color: $light_green;
+        }
+        .status_color_draft {
+          background-color: $gray;
+        }
+        .status_color_overdue {
+          background-color: $beige;
+        }
+        .status_color_poid,
+        .status_color_draft,
+        .status_color_overdue {
+          width: 89px;
+          height: 40px;
+          border-radius: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Nunito Sans';
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

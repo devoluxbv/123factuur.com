@@ -20,11 +20,28 @@
   <link rel="stylesheet" href="{% sass_src 'sass/home_invoice_section.scss' %}">
   <link rel="stylesheet" href="{% sass_src 'sass/home_our_blog_section.scss' %}">
   <link rel="stylesheet" href="{% sass_src 'sass/home_seo_section.scss' %}">
+  <link rel="stylesheet" href="{% sass_src 'sass/menu.scss' %}">
+  <link rel="stylesheet" href="{% sass_src 'sass/invoices_list_title.scss' %}">
+
+
   <title>Factuur.com</title>
 </head>
 
 <body>
-  <header><span>123</span>FACTUUR.COM</header>
+  <header>
+    <div class="header_container">
+      <img id="menu_toggle" src="{% static 'img/menu.png'%}" alt="">
+      <div><span>123</span>FACTUUR.COM</div>
+      
+    </div>
+    <div id="menu_mob" style="display:none">
+      <ul>
+        <li><a href="{% url 'invoices_list' %}">Invoices list</a></li>
+        <li><a href="#">Generate invoice</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </header>
   {% block content %}
   {% endblock %}
   <footer>
@@ -33,7 +50,7 @@
       metus aliquam dui, sit amet consectetur erat sapien ac leo.</p>
     <p>Політика конфіденційності</p>
   </footer>
-
+<script src="{% static 'js/script.js'%}"></script>
 </body>
 
 </html>

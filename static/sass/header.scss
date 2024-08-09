@@ -3,16 +3,28 @@ header {
   z-index: 100;
   width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
-  padding: 26px 0px;
-  font-family: 'Inter';
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 29.05px;
-  text-align: center;
-  background-color: #FFF;
-  span{
-    color:$green;
+    top: 0;
+    left: 0;
+  .header_container {
+    width: calc(100% - 40px);
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 20px;
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.05px;
+    text-align: center;
+    background-color: #fff;
+    span {
+      color: $green;
+    }
+    div:nth-child(2) {
+      flex-grow: 1;
+      text-align: center;
+    }
   }
 }

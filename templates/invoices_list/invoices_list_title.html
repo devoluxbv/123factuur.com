@@ -1,0 +1,69 @@
+{% load static %}
+<section class="invoice_list_title">
+  <h1>My invoice</h1>
+  <div class="circle_with_plus">
+    <img src="{% static 'img/white_plus.png'%}" alt="">
+  </div>
+  <div class="invoices_wrapper">
+    <div class="invoice">
+      <img src="{% static 'img/clock.png'%}" alt="">
+      <p class="invoice_paragraph">100500</p>
+      <p class="invoice_paragraph">Lorem ipsum</p>
+    </div>
+    <div class="invoice">
+      <img src="{% static 'img/clock.png'%}" alt="">
+      <p class="invoice_paragraph">100500</p>
+      <p class="invoice_paragraph">Lorem ipsum</p>
+    </div>
+    <div class="invoice">
+      <img src="{% static 'img/clock.png'%}" alt="">
+      <p class="invoice_paragraph">100500</p>
+      <p class="invoice_paragraph">Lorem ipsum</p>
+    </div>
+    <div class="invoice_active">
+      <img src="{% static 'img/invoice_picture_mini.png'%}" alt="">
+      <div>
+        <p class="invoice_paragraph">100500</p>
+        <p class="invoice_paragraph">Lorem ipsum</p>
+      </div>
+    </div>
+  </div>
+  <div class="invoices_filter_wrapper">
+    <input type="number" name="invoice_number" id="" placeholder="Enter Invoice Number">
+    <div class="invoice_type_wrapper">
+      <div class="invoice_type"><span>All Invoices</span><div class="invoice_type_first">1</div></div>
+      <div class="invoice_type"><span>Unpraid</span> <div class="invoice_type_second">2</div></div>
+      <div class="invoice_type"><span>Draft</span> <div class="invoice_type_third">3</div></div>
+    </div>
+    <div class="buttons_filter_wrapper">
+      <button><img src="{% static 'img/filter.png'%}" alt="">Filter</button>
+      <button><img src="{% static 'img/sort.png'%}" alt="">Newest First</button>
+    </div>
+  </div>
+  <table class="data-table">
+    <thead>
+        <tr>
+            <th class="thead_cell_1">Status</th>
+            <th class="thead_cell_2">Date <img src="{% static 'img/chevron_down.png'%}" alt=""></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><div class="status_color_poid">Poid</div></td>
+            <td>22.05.2023</td>
+            <td><img src="{% static 'img/eye.svg'%}" alt=""></td>
+        </tr>
+        <tr>
+          <td><div class="status_color_draft">Draft</div></td>
+          <td>22.05.2023</td>
+          <td><img src="{% static 'img/eye.svg'%}" alt=""></td>
+        </tr>
+        <tr>
+          <td><div class="status_color_overdue">Overdue</div></td>
+            <td>22.05.2023</td>
+            <td><img src="{% static 'img/eye.svg'%}" alt=""></td>
+        </tr>
+    </tbody>
+</table>
+</section>
